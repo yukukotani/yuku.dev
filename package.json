@@ -12,7 +12,12 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^12.0.1",
+    "remark-extract-frontmatter": "^2.0.3",
     "remark-html": "^12.0.0",
-    "remark-parse": "^8.0.3"
+    "remark-parse": "^8.0.3",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "remark-frontmatter": "^2.0.0"
   }
 }

@@ -4,6 +4,9 @@ import path from "path";
 import remark from "remark";
 import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkExtract from "remark-extract-frontmatter";
+import { parse } from "yaml";
 
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
 
@@ -35,12 +38,15 @@ export default function Article({ content }) {
   const md = remark()
     .use(remarkParse)
     .use(remarkHtml)
-    .processSync(content)
-    .toString();
+    .use(remarkFrontmatter)
+    .use(remarkExtract, { yaml: parse })
+    .processSync(content);
+
+  console.log(md);
   return (
-    <div
-      className="markdown-body"
-      dangerouslySetInnerHTML={{ __html: md }}
-    ></div>
+    <div className="markdown-body">
+      <h1>{md.data.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: md.toString() }}></div>
+    </div>
   );
 }
