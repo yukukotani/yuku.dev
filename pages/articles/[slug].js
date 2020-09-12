@@ -37,5 +37,10 @@ export default function Article({ content }) {
     .use(remarkHtml)
     .processSync(content)
     .toString();
-  return <div dangerouslySetInnerHTML={{ __html: md }}></div>;
+  return (
+    <div
+      className="markdown-body"
+      dangerouslySetInnerHTML={{ __html: md }}
+    ></div>
+  );
 }
