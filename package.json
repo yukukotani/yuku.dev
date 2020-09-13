@@ -18,5 +18,8 @@
     "remark-html": "^12.0.0",
     "remark-parse": "^8.0.3",
     "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0"
   }
 }
