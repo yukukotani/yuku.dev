@@ -17,10 +17,10 @@ function MyApp({ Component, pageProps }) {
       <header className={styles.header}>
         <div className={styles.icons}>
           <a href="https://github.com/Monchi">
-            <img src="github.png" />
+            <img src="/github.png" />
           </a>
           <a href="https://twitter.com/MonchiFC">
-            <img src="twitter.png" />
+            <img src="/twitter.png" />
           </a>
         </div>
       </header>
