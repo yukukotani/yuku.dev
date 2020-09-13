@@ -28,17 +28,6 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <div className={styles.icons}>
-          <a target="_blank" href="https://github.com/Monchi">
-            <img src="/github.png" />
-          </a>
-          <a target="_blank" href="https://twitter.com/MonchiFC">
-            <img src="/twitter.png" />
-          </a>
-        </div>
-      </header>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
           <Link href="/">yuku.dev</Link>
@@ -48,8 +37,18 @@ function MyApp({ Component, pageProps }) {
       </main>
 
       <footer className={styles.footer}>
-        COPYRIGHT YUKU KOTANI <br />
-        This site uses Google Analytics.
+        <div className={styles.icons}>
+          <a target="_blank" href="https://github.com/Monchi">
+            <img src="/github.png" />
+          </a>
+          <a target="_blank" href="https://twitter.com/MonchiFC">
+            <img src="/twitter.png" />
+          </a>
+        </div>
+        <div>
+          COPYRIGHT YUKU KOTANI <br />
+          This site uses Google Analytics.
+        </div>
       </footer>
     </div>
   );

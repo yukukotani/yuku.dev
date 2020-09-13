@@ -3,12 +3,6 @@
   padding: 0 2rem;
 }
 
-.header {
-  height: 5rem;
-  display: flex;
-  align-items: center;
-}
-
 .icons {
   margin: 0 auto;
 }
@@ -22,14 +16,14 @@
   max-width: 800px;
   margin: 0px auto;
   overflow-wrap: break-word;
-  padding-bottom: 8rem;
+  padding: 5rem 0 8rem;
 }
 
 .footer {
   max-width: 800px;
-  height: 100px;
   margin: 0px auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
