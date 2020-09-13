@@ -18,7 +18,7 @@ const markdownProcessor = remark()
 // ルーティングの情報が入ったparamsを受け取る
 export async function getStaticProps() {
   const dir = await fs.promises.readdir(ARTICLE_DIR);
-  const contents = dir
+  const articles = dir
     .map((filename) => {
       const content = fs.readFileSync(
         path.join(ARTICLE_DIR, filename),
@@ -34,18 +34,18 @@ export async function getStaticProps() {
       return a.date < b.date ? 1 : -1;
     });
 
-  return { props: { contents } };
+  return { props: { articles } };
 }
 
-export default function Home({ contents }) {
+export default function Home({ articles }) {
   return (
     <div className={styles.articles}>
-      {contents.map((c) => {
+      {articles.map((article) => {
         return (
           <div className={styles.article}>
-            <div>{c.date}</div>
+            <div>{article.date}</div>
             <div className={styles.articleTitle}>
-              <a href={`/articles/${c.name}`}>{c.title}</a>
+              <a href={`/articles/${article.name}`}>{article.title}</a>
             </div>
           </div>
         );
