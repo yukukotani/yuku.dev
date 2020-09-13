@@ -47,7 +47,9 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
 
-      <footer className={styles.footer}>COPYRIGHT YUKU KOTANI</footer>
+      <footer className={styles.footer}>
+        COPYRIGHT YUKU KOTANI | This site uses Google Analytics.
+      </footer>
     </div>
   );
 }
