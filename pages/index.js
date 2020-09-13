@@ -31,7 +31,7 @@ export async function getStaticProps() {
     })
     .sort(function (a, b) {
       // イケんのか！？イケんのか！？！？
-      return a.date < b.date ? 1 : -1;
+      return a.publishedAt < b.publishedAt ? 1 : -1;
     });
 
   return { props: { articles } };
@@ -43,7 +43,7 @@ export default function Home({ articles }) {
       {articles.map((article) => {
         return (
           <div className={styles.article}>
-            <div>{article.date}</div>
+            <div>{article.publishedAt}</div>
             <div className={styles.articleTitle}>
               <a href={`/articles/${article.name}`}>{article.title}</a>
             </div>
