@@ -4,6 +4,7 @@ import styles from "../styles/App.module.css";
 
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import * as gtag from "../lib/gtag";
 
 function MyApp({ Component, pageProps }) {
@@ -42,7 +43,7 @@ function MyApp({ Component, pageProps }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <a href="/">yuku.dev</a>
+          <Link href="/">yuku.dev</Link>
         </h1>
         <p className={styles.description}>こたにゆうくのページです</p>
         <Component {...pageProps} />

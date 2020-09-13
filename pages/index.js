@@ -9,6 +9,8 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkExtract from "remark-extract-frontmatter";
 import { parse } from "yaml";
 
+import Link from "next/link";
+
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
 const markdownProcessor = remark()
   .use(remarkParse)
@@ -45,7 +47,7 @@ export default function Index({ articles }) {
           <div className={styles.article} key={article.publishedAt}>
             <div>{article.publishedAt}</div>
             <div className={styles.articleTitle}>
-              <a href={`/articles/${article.name}`}>{article.title}</a>
+              <Link href={`/articles/${article.name}`}>{article.title}</Link>
             </div>
           </div>
         );
