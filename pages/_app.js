@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import "github-markdown-css";
+import styles from "../styles/App.module.css";
 
 import Head from "next/head";
-import styles from "../styles/App.module.css";
 
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -48,7 +48,8 @@ function MyApp({ Component, pageProps }) {
       </main>
 
       <footer className={styles.footer}>
-        COPYRIGHT YUKU KOTANI | This site uses Google Analytics.
+        COPYRIGHT YUKU KOTANI <br />
+        This site uses Google Analytics.
       </footer>
     </div>
   );
