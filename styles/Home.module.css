@@ -25,13 +25,18 @@
   font-size: 4rem;
 }
 
+.title > a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .title,
 .description {
   text-align: center;
 }
 
 .description {
-  line-height: 1.5;
+  line-height: 1.2;
   font-size: 1.5rem;
 }
 

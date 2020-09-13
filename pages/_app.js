@@ -15,7 +15,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>yuku.dev</h1>
+        <h1 className={styles.title}>
+          <a href="/">yuku.dev</a>
+        </h1>
         <p className={styles.description}>こたにゆうくのページです</p>
         <Component {...pageProps} />
       </main>
