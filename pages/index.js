@@ -37,12 +37,12 @@ export async function getStaticProps() {
   return { props: { articles } };
 }
 
-export default function Home({ articles }) {
+export default function Index({ articles }) {
   return (
     <div className={styles.articles}>
       {articles.map((article) => {
         return (
-          <div className={styles.article}>
+          <div className={styles.article} key={article.publishedAt}>
             <div>{article.publishedAt}</div>
             <div className={styles.articleTitle}>
               <a href={`/articles/${article.name}`}>{article.title}</a>
