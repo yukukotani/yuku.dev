@@ -1,3 +1,3 @@
 # yuku.dev
 
-https://yuku,dev
+https://yuku.dev
