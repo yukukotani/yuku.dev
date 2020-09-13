@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "github-markdown-css";
+
 import Head from "next/head";
 import styles from "../styles/App.module.css";
 
@@ -24,10 +26,6 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>yuku.dev</title>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"
-        ></link>
       </Head>
 
       <header className={styles.header}>

@@ -28,7 +28,6 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-// ルーティングの情報が入ったparamsを受け取る
 export async function getStaticProps({ params }) {
   const slug = params.slug;
   const rawMarkdown = await fs.readFile(
