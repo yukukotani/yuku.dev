@@ -1,0 +1,56 @@
+.container {
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+
+.header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  margin: 0 auto;
+}
+
+.icons > a > img {
+  height: 3rem;
+  margin: 1rem;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0px auto;
+  overflow-wrap: break-word;
+  padding-bottom: 8rem;
+}
+
+.footer {
+  max-width: 800px;
+  height: 100px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
