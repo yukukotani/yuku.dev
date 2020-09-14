@@ -1,6 +1,8 @@
 import { promises as fs } from "fs";
 import path from "path";
 
+import Head from "next/head";
+
 import remark from "remark";
 import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
@@ -43,9 +45,14 @@ export async function getStaticProps({ params }) {
 
 export default function Article({ title, contentHtml }) {
   return (
-    <div className="markdown-body">
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
-    </div>
+    <>
+      <Head>
+        <title>{title} | yuku.dev</title>
+      </Head>
+      <div className="markdown-body">
+        <h1>{title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
+      </div>
+    </>
   );
 }
