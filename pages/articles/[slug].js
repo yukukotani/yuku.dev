@@ -49,7 +49,7 @@ export default function Article({ title, contentHtml }) {
   return (
     <>
       <Head>
-        <title>{title} | yuku.dev</title>
+        <title>{title} | yuku\.dev</title>
       </Head>
       <div className="markdown-body">
         <h1>{title}</h1>

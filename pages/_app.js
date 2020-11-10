@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>yuku.dev</title>
+        <title>yuku\.dev</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
