@@ -40,7 +40,6 @@ export async function getStaticProps() {
 }
 
 export default function Index({ articles }) {
-  console.log(articles);
   return (
     <div className={styles.articles}>
       {articles.map((article) => {
