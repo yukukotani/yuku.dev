@@ -14,7 +14,7 @@ import Link from "next/link";
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
 const markdownProcessor = remark()
   .use(remarkParse)
-  .use(remarkFrontmatter)
+  .use(remarkFrontmatter, { type: "yaml", marker: "+" })
   .use(remarkExtract, { yaml: parse });
 
 // ルーティングの情報が入ったparamsを受け取る
@@ -40,6 +40,7 @@ export async function getStaticProps() {
 }
 
 export default function Index({ articles }) {
+  console.log(articles);
   return (
     <div className={styles.articles}>
       {articles.map((article) => {

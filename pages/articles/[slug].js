@@ -16,7 +16,7 @@ const ARTICLE_DIR = path.join(process.cwd(), "articles");
 const markdownProcessor = remark()
   .use(remarkParse)
   .use(remarkHtml)
-  .use(remarkFrontmatter)
+  .use(remarkFrontmatter, { type: "yaml", marker: "+" })
   .use(remarkExtract, { yaml: parse })
   .use(remarkPrism);
 
