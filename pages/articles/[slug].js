@@ -8,6 +8,7 @@ import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkExtract from "remark-extract-frontmatter";
+import remarkGfm from "remark-gfm";
 import { parse } from "yaml";
 
 const ARTICLE_DIR = path.join(process.cwd(), "articles");

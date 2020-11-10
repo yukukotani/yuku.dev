@@ -21,12 +21,12 @@
     "remark": "^12.0.1",
     "remark-extract-frontmatter": "^2.0.3",
     "remark-frontmatter": "^2.0.0",
+    "remark-gfm": "^1.0.0",
     "remark-html": "^12.0.0",
     "remark-parse": "^8.0.3",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
     "husky": "^4.3.0",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.2"
