@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "github-markdown-css";
+import "prismjs/themes/prism.css";
 import styles from "../styles/App.module.css";
 
 import Head from "next/head";

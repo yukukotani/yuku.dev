@@ -21,9 +21,9 @@
     "remark": "^12.0.1",
     "remark-extract-frontmatter": "^2.0.3",
     "remark-frontmatter": "^2.0.0",
-    "remark-gfm": "^1.0.0",
     "remark-html": "^12.0.0",
     "remark-parse": "^8.0.3",
+    "remark-prism": "^1.1.18",
     "yaml": "^1.10.0"
   },
   "devDependencies": {

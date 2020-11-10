@@ -8,7 +8,7 @@ import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkExtract from "remark-extract-frontmatter";
-import remarkGfm from "remark-gfm";
+import remarkPrism from "remark-prism";
 import { parse } from "yaml";
 
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
@@ -17,7 +17,8 @@ const markdownProcessor = remark()
   .use(remarkParse)
   .use(remarkHtml)
   .use(remarkFrontmatter)
-  .use(remarkExtract, { yaml: parse });
+  .use(remarkExtract, { yaml: parse })
+  .use(remarkPrism);
 
 export async function getStaticPaths() {
   const dir = await fs.readdir(ARTICLE_DIR);
