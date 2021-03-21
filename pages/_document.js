@@ -7,6 +7,12 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <script
+            async
+            defer
+            data-domain="yuku.dev"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
