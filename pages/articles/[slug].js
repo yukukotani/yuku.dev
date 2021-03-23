@@ -1,3 +1,5 @@
+import styles from "../../styles/Article.module.css";
+
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -9,6 +11,7 @@ import remarkHtml from "remark-html";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkExtract from "remark-extract-frontmatter";
 import remarkPrism from "remark-prism";
+import remarkExternalLink from "remark-external-links";
 import { parse } from "yaml";
 
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
@@ -18,7 +21,8 @@ const markdownProcessor = remark()
   .use(remarkHtml)
   .use(remarkFrontmatter, { type: "yaml", marker: "+" })
   .use(remarkExtract, { yaml: parse })
-  .use(remarkPrism);
+  .use(remarkPrism)
+  .use(remarkExternalLink, { rel: ["noopener"] });
 
 export async function getStaticPaths() {
   const dir = await fs.readdir(ARTICLE_DIR);
@@ -51,7 +55,7 @@ export default function Article({ title, contentHtml }) {
       <Head>
         <title>{title} | yuku\.dev</title>
       </Head>
-      <div className="markdown-body">
+      <div className={`markdown-body ${styles.article}`}>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
       </div>
