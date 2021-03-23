@@ -1,3 +1,5 @@
+import styles from "../../styles/Article.module.css";
+
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -53,7 +55,7 @@ export default function Article({ title, contentHtml }) {
       <Head>
         <title>{title} | yuku\.dev</title>
       </Head>
-      <div className="markdown-body">
+      <div className={`markdown-body ${styles.article}`}>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
       </div>
