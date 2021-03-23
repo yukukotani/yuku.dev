@@ -13,6 +13,7 @@ import remarkExtract from "remark-extract-frontmatter";
 import remarkPrism from "remark-prism";
 import remarkExternalLink from "remark-external-links";
 import { parse } from "yaml";
+import { useRouter } from "next/router";
 
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
 
@@ -50,10 +51,19 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Article({ title, contentHtml }) {
+  const router = useRouter();
+  const url = `https://yuku.dev${router.asPath}`;
   return (
     <>
       <Head>
         <title>{title} | yuku\.dev</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="blog" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:url" content={url} />
+        <meta name="twitter:site" content="@MonchiFC" />
       </Head>
       <div className={`markdown-body ${styles.article}`}>
         <h1>{title}</h1>
