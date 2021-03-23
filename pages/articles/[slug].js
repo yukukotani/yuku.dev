@@ -9,6 +9,7 @@ import remarkHtml from "remark-html";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkExtract from "remark-extract-frontmatter";
 import remarkPrism from "remark-prism";
+import remarkExternalLink from "remark-external-links";
 import { parse } from "yaml";
 
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
@@ -18,7 +19,8 @@ const markdownProcessor = remark()
   .use(remarkHtml)
   .use(remarkFrontmatter, { type: "yaml", marker: "+" })
   .use(remarkExtract, { yaml: parse })
-  .use(remarkPrism);
+  .use(remarkPrism)
+  .use(remarkExternalLink, { rel: ["noopener"] });
 
 export async function getStaticPaths() {
   const dir = await fs.readdir(ARTICLE_DIR);
