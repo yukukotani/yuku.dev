@@ -50,7 +50,7 @@ export async function getStaticProps({ params }) {
     props: {
       title: processed.data.title,
       contentHtml: processed.toString(),
-      ogImage: processed.data.ogImage,
+      ogImage: processed.data.ogImage ?? null,
     },
   };
 }
