@@ -47,29 +47,27 @@ export async function getStaticProps({ params }) {
   const processed = await markdownProcessor.process(rawMarkdown);
 
   return {
-    props: { title: processed.data.title, contentHtml: processed.toString() },
+    props: {
+      title: processed.data.title,
+      contentHtml: processed.toString(),
+      ogImage: processed.data.ogImage,
+    },
   };
 }
 
-export default function Article({ title, contentHtml }) {
+export default function Article({ title, contentHtml, ogImage }) {
   const router = useRouter();
-  const url = `https://yuku.dev${router.asPath}`;
   return (
     <>
-      <Head>
-        <title>{title} | yuku\.dev</title>
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="blog" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:url" content={url} />
-        <meta name="twitter:site" content="@MonchiFC" />
-      </Head>
       <NextSeo
         title={title}
         openGraph={{
           title: title,
+          images: [
+            {
+              url: ogImage,
+            },
+          ],
         }}
       />
       <div className={`markdown-body ${styles.article}`}>

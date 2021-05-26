@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .icons {
@@ -16,12 +16,12 @@
   max-width: 800px;
   margin: 0px auto;
   overflow-wrap: break-word;
-  padding: 5rem 0 8rem;
+  padding-top: 5rem;
 }
 
 .footer {
   max-width: 800px;
-  padding-bottom: 12px;
+  padding: 4rem 0 12px;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
