@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
           title: "Yuku Kotani",
           description: "こたにゆうくのブログです",
           url: `https://yuku.dev${router.asPath}`,
-          type: "website",
+          type: "blog",
         }}
         twitter={{
           cardType: "summary_large_image",
