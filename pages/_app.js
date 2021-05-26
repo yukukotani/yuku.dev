@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import * as gtag from "../lib/gtag";
+import { DefaultSeo } from "next-seo-yuku-fork";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -24,9 +25,22 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>yuku\.dev</title>
-      </Head>
+      <DefaultSeo
+        defaultTitle="Yuku Kotani"
+        titleTemplate="%s | Yuku Kotani"
+        description="こたにゆうくのブログです"
+        openGraph={{
+          site_name: "Yuku Kotani",
+          title: "Yuku Kotani",
+          description: "こたにゆうくのブログです",
+          url: `https://yuku.dev${router.asPath}`,
+          type: "website",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "@MonchiFC",
+        }}
+      />
 
       <main className={styles.main}>
         <h1 className={styles.title}>

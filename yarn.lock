@@ -1730,6 +1730,11 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
+next-seo-yuku-fork@^4.25.0-SNAPSHOT:
+  version "4.25.0-SNAPSHOT"
+  resolved "https://registry.yarnpkg.com/next-seo-yuku-fork/-/next-seo-yuku-fork-4.25.0-SNAPSHOT.tgz#ed73ff4525d9a92d304b40578a49390b638e82b4"
+  integrity sha512-nF1QPQWQx3rSU4+9Tjp7zAC3kCKrU1JKuolL/+Tbt1bpXp9QLM/uT/gjjzveCD40Ra/5uNm9IxLW+bgWKXVQ0g==
+
 next@^10.0.1:
   version "10.0.9"
   resolved "https://registry.yarnpkg.com/next/-/next-10.0.9.tgz#ad5d8e0368fee8363cdfd64d22dfbf71f683ae66"

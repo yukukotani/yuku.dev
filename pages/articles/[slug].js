@@ -14,6 +14,7 @@ import remarkPrism from "remark-prism";
 import remarkExternalLink from "remark-external-links";
 import { parse } from "yaml";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo-yuku-fork";
 
 const ARTICLE_DIR = path.join(process.cwd(), "articles");
 
@@ -65,6 +66,12 @@ export default function Article({ title, contentHtml }) {
         <meta name="twitter:url" content={url} />
         <meta name="twitter:site" content="@MonchiFC" />
       </Head>
+      <NextSeo
+        title={title}
+        openGraph={{
+          title: title,
+        }}
+      />
       <div className={`markdown-body ${styles.article}`}>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>

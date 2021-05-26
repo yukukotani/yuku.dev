@@ -16,6 +16,7 @@
   "dependencies": {
     "github-markdown-css": "^4.0.0",
     "next": "^10.0.1",
+    "next-seo-yuku-fork": "^4.25.0-SNAPSHOT",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "remark": "^13.0.0",
