@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "astro": "^0.17.1"
+  },
+  "dependencies": {
+    "github-markdown-css": "^4.0.0"
   }
 }
