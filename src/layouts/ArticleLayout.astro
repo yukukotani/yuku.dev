@@ -7,17 +7,17 @@ import Container from "../components/Container.astro";
 import Article from '../components/Article.astro';
 
 const {content} = Astro.props;
-const {title, description, publishDate, author, heroImage, permalink} = content;
+const {title, publishDate, url} = content;
 ---
 <html>
   <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
+    <BaseHead title={title} url={Astro.request.canonicalURL} />
   </head>
 
   <body>
     <BlogHeader />
     <Container>
-      <Article title={title} author={author} heroImage={heroImage} publishDate={publishDate}>
+      <Article title={title} publishDate={publishDate}>
         <slot />
       </Article>
     </Container>
