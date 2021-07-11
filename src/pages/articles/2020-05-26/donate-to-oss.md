@@ -1,7 +1,6 @@
 ---
 title: スタートアップだからこそ OSS に寄付をする理由
-publishedAt: 2021-05-26 18:00
-publishDate: "Tuesday, June 8 2021"
+publishDate: 2021-05-26
 layout: "../../../layouts/ArticleLayout.astro"
 ---
 

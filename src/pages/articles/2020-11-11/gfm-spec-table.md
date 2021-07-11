@@ -1,7 +1,6 @@
 ---
 title: GitHub Flavored Markdown のテーブルの仕様
-publishedAt: 2020-11-11 04:56
-publishDate: "Tuesday, June 8 2021"
+publishDate: 2020-11-11
 layout: "../../../layouts/ArticleLayout.astro"
 ---
 

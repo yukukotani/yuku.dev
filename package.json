@@ -10,6 +10,7 @@
     "astro": "^0.17.1"
   },
   "dependencies": {
+    "date-fns": "^2.22.1",
     "github-markdown-css": "^4.0.0"
   }
 }

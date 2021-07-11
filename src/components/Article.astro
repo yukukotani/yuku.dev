@@ -1,16 +1,19 @@
 ---
+import { format } from "date-fns";
+
 export interface Props {
   title: string;
   author: string;
   publishDate: string;
 }
 
-const { title, author, publishDate } = Astro.props;
+const { title, publishDate } = Astro.props;
+const formattedDate = format(new Date(publishDate), "yyyy-MM-dd");
 ---
 
 <article>
   <div>
-    <p class="date">{publishDate}</p>
+    <p class="date">{formattedDate}</p>
     <h1 class="title">{title}</h1>
   </div>
   <div class="markdown-body">

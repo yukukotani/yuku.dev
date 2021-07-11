@@ -6,8 +6,12 @@ import BlogFooter from '../components/BlogFooter.astro';
 import ArticlePreview from '../components/ArticlePreview.astro';
 import Container from "../components/Container.astro";
 
-let allArticles = Astro.fetchContent('./articles/**/*.md');
-allArticles = allArticles.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+const dateFormat = "yyyy-MM-dd";
+
+const allArticles = Astro.fetchContent('./articles/**/*.md');
+allArticles = allArticles.sort((a, b) => {
+  return new Date(b.publishDate) - new Date(a.publishDate)
+});
 
 ---
 <html>

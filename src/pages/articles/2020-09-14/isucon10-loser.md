@@ -1,7 +1,6 @@
 ---
 title: ISUCON10 予選負けた 悔しい
-publishedAt: 2020-09-14 20:15
-publishDate: "Tuesday, June 8 2021"
+publishDate: 2020-09-14
 layout: "../../../layouts/ArticleLayout.astro"
 ---
 

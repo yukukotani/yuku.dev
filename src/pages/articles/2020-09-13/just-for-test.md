@@ -1,7 +1,6 @@
 ---
 title: ブログを作ったテスト記事
-publishedAt: 2020-09-13 03:00
-publishDate: "Tuesday, June 8 2021"
+publishDate: 2020-09-13
 layout: "../../../layouts/ArticleLayout.astro"
 ---
 

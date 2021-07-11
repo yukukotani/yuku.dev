@@ -1,7 +1,6 @@
 ---
 title: 20歳になっちゃった
-publishedAt: 2021-03-23 17:15
-publishDate: "Tuesday, June 8 2021"
+publishDate: 2021-03-23
 layout: "../../../layouts/ArticleLayout.astro"
 ---
 

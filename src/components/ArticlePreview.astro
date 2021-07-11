@@ -1,12 +1,15 @@
 ---
+import { format } from "date-fns";
+
 export interface Props {
   article: any;
 }
 
 const { article } = Astro.props;
+const formattedDate = format(new Date(article.publishDate), "yyyy-MM-dd");
 ---
 <article class="article">
-  <div class="date">{article.publishDate}</div>
+  <div class="date">{formattedDate}</div>
   <a href={article.url}><h1 class="title">{article.title}</h1></a>
 </article>
 
