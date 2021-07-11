@@ -10,19 +10,19 @@ const formattedDate = format(new Date(article.publishDate), "yyyy-MM-dd");
 ---
 <article class="article">
   <div class="date">{formattedDate}</div>
-  <a href={article.url}><h1 class="title">{article.title}</h1></a>
+  <a href={article.url}><span class="title">{article.title}</span></a>
 </article>
 
 <style lang="scss">
 .article {
-  padding: 8px 0;
+  padding: 6px 0;
 
   .date {
     font-size: 14px;
     color: var(--color-gray);
   }
   .title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 </style>
