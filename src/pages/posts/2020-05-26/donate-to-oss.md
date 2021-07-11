@@ -51,5 +51,4 @@ Babel の記事を読んですぐに、エンジニアメンバーに危機感�
 
 皆さんがお世話になっている OSS を思い起こして寄付を考えるきっかけになると嬉しいです。また、より大きな貢献をしていくためにも、Ubie を一緒に成長させてくれる方も募集中です。
 
-[Ubie Discovery 採用サイト](https://recruit.ubie.life/œ)
-{"mode":"full","isActive":false}
+[Ubie Discovery 採用サイト](https://recruit.ubie.life/)

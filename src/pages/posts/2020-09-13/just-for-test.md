@@ -14,4 +14,3 @@ code block // TODO: syntax highlight
 ```
 
 ~~aaa~~
-{"mode":"full","isActive":false}

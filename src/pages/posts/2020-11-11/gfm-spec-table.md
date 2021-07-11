@@ -350,5 +350,3 @@ Output:
   </thead>
 </table>
 ```
-
-{"mode":"full","isActive":false}

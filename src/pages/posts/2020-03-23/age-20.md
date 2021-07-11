@@ -20,4 +20,3 @@ layout: "../../../layouts/BlogPost.astro"
 20 代も頑張るので応援してください！！緊急事態とか落ち着いたらお酒飲みにいきましょう！！
 
 欲しいものリスト: [https://www.amazon.jp/hz/wishlist/ls/2UY1V33QSL99J?ref\_=wl_share](https://www.amazon.jp/hz/wishlist/ls/2UY1V33QSL99J?ref_=wl_share)
-{"mode":"full","isActive":false}
