@@ -2,7 +2,7 @@
 title: GitHub Flavored Markdown のテーブルの仕様
 publishedAt: 2020-11-11 04:56
 publishDate: "Tuesday, June 8 2021"
-layout: "../../../layouts/BlogPost.astro"
+layout: "../../../layouts/ArticleLayout.astro"
 ---
 
 GitHub Flavored Markdown のテーブル仕様([原文](https://github.github.com/gfm/#tables-extension-))について簡単にまとめる。

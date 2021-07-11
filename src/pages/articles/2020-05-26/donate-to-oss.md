@@ -2,7 +2,7 @@
 title: スタートアップだからこそ OSS に寄付をする理由
 publishedAt: 2021-05-26 18:00
 publishDate: "Tuesday, June 8 2021"
-layout: "../../../layouts/BlogPost.astro"
+layout: "../../../layouts/ArticleLayout.astro"
 ---
 
 いま働いている Ubie で OSS に寄付していくことを決め、まず手始めに JavaScript トランスパイラの [Babel](https://babeljs.io/) に$500 の寄付を行いました。日本のスタートアップが OSS に寄付をするのはまだあまり目にしないため、僕がスタートアップだからこそ OSS に寄付しようと考えた理由をご紹介します。

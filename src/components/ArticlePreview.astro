@@ -1,13 +1,13 @@
 ---
 export interface Props {
-  post: any;
+  article: any;
 }
 
-const { post } = Astro.props;
+const { article } = Astro.props;
 ---
 <article class="article">
-  <div class="date">{post.publishDate}</div>
-  <a href={post.url}><h1 class="title">{post.title}</h1></a>
+  <div class="date">{article.publishDate}</div>
+  <a href={article.url}><h1 class="title">{article.title}</h1></a>
 </article>
 
 <style lang="scss">

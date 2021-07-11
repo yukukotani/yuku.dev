@@ -2,7 +2,7 @@
 title: 20歳になっちゃった
 publishedAt: 2021-03-23 17:15
 publishDate: "Tuesday, June 8 2021"
-layout: "../../../layouts/BlogPost.astro"
+layout: "../../../layouts/ArticleLayout.astro"
 ---
 
 **TL;DR: お酒飲めるようになったのでいろいろ落ち着いたら誘ってください！！**

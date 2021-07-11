@@ -2,7 +2,7 @@
 title: ISUCON10 予選負けた 悔しい
 publishedAt: 2020-09-14 20:15
 publishDate: "Tuesday, June 8 2021"
-layout: "../../../layouts/BlogPost.astro"
+layout: "../../../layouts/ArticleLayout.astro"
 ---
 
 ISUCON10 予選に 1 人参加して負けた。最高ベンチスコアは 1700 弱だった。熱が冷めないうちに書こうと思ったら Static Site Generation やりたくなっちゃってブログ作ったので出来立てホヤホヤでやったことと所感を書く。
