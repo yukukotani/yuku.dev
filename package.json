@@ -1,5 +1,5 @@
 {
-  "name": "@example/blog",
+  "name": "yuku.dev",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,8 +8,5 @@
   },
   "devDependencies": {
     "astro": "^0.17.1"
-  },
-  "snowpack": {
-    "workspaceRoot": "../.."
   }
 }
