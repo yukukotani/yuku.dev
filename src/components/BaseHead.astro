@@ -32,5 +32,19 @@ const description = "こたにゆうくのブログ";
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content="https://astro.build/social.jpg?v=1" />
 
+<!-- Stylesheet -->
 <link rel="stylesheet" href="/global.css" />
 <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+
+<!-- Analytics -->
+{ process.env.NODE_ENV === "production" && <>
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y6GFJZCCEN', {
+      page_path: window.location.pathname,
+    });
+  </script>
+</> }
