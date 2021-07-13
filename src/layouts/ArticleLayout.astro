@@ -9,7 +9,7 @@ import Article from '../components/Article.astro';
 const {content} = Astro.props;
 const {title, publishDate, url, ogImage} = content;
 ---
-<html>
+<html lang="ja">
   <head>
     <BaseHead title={title} url={Astro.request.canonicalURL} ogImage={ogImage} />
     <link rel="stylesheet" href="https://cdn.skypack.dev/prism-themes/themes/prism-darcula.css">
