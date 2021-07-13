@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/articles/202009130300-just-for-test", "destination": "/articles/2020-09-13/just-for-test" },
+    { "source": "/articles/202009142015-isucon10-loser", "destination": "/articles/2020-09-14/isucon10-loser" },
+    { "source": "/articles/202011110456-gfm-spec-table", "destination": "/articles/2020-11-11/gfm-spec-table" },
+    { "source": "/articles/202012310022-2020-to-2021", "destination": "/articles/2020-12-31/2020-to-2021" },
+    { "source": "/articles/202103231715-age-20", "destination": "/articles/2021-03-23/age-20" },
+    { "source": "/articles/202105261800-donate-to-oss", "destination": "/articles/2021-05-26/donate-to-oss" }
+  ]
+}
