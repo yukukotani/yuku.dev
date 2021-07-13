@@ -1,10 +1,10 @@
 ---
 export interface Props {
-
-title?: string;
+  title?: string;
   url: string;
+  ogImage?: string;
 }
-const { title, url } = Astro.props;
+const { title, url, ogImage } = Astro.props;
 const fullTitle = title ? `${title} | Yuku Kotani` : "Articles | Yuku Kotani"
 const description = "こたにゆうくのブログ";
 ---
@@ -23,21 +23,21 @@ const description = "こたにゆうくのブログ";
 <meta property="og:url" content={url} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="https://astro.build/social.jpg?v=1" />
+{ ogImage && <meta property="og:image" content={ogImage} /> }
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={url} />
 <meta property="twitter:title" content={fullTitle} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://astro.build/social.jpg?v=1" />
+{ ogImage && <meta property="twitter:image" content={ogImage} /> }
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="/global.css" />
 <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
 
 <!-- Analytics -->
-{ process.env.NODE_ENV === "production" && <>
+{ process.env.NODE_ENV === "production" ? <>
   <script async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,4 +47,4 @@ const description = "こたにゆうくのブログ";
       page_path: window.location.pathname,
     });
   </script>
-</> }
+</> : null }
