@@ -1,0 +1,59 @@
+<header class="footer">
+  <div class="profile">
+    <img src="/icon.png" class="icon" />
+    <div>
+      <div class="name">Yuku Kotani</div>
+      <div class="description">
+        Software Engineer @ <a href="https://ubie.life" target="_blank" rel="noopener">Ubie, Inc.</a>
+        <br />
+        Undergraduate @ University of Tsukuba.
+      </div>
+    </div>
+  </div>
+  <div class="links">
+    <a href="https://github.com/Monchi" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://twitter.com/MonchiFC" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://zenn.dev/yuku" target="_blank" rel="noopener">Zenn</a>
+  </div>
+  <div class="note">&copy; Yuku Kotani | This site uses Google Analytics.</div>
+</header>
+
+<style lang="scss">
+.footer {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+
+  .profile {
+    margin: 0 auto;
+    display: flex;
+    
+    .icon {
+      object-fit:cover;
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .description {
+      font-size: 12px;
+    }
+  }
+  .links {
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    & > a {
+      margin: 0 4px;
+    }
+  }
+  .note {
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 0px 16px;
+  }
+}
+</style>

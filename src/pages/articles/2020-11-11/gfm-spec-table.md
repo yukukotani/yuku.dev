@@ -1,7 +1,8 @@
-+++
+---
 title: GitHub Flavored Markdown のテーブルの仕様
-publishedAt: 2020-11-11 04:56
-+++
+publishDate: 2020-11-11
+layout: '../../../layouts/ArticleLayout.astro'
+---
 
 GitHub Flavored Markdown のテーブル仕様([原文](https://github.github.com/gfm/#tables-extension-))について簡単にまとめる。
 
@@ -21,7 +22,6 @@ Input:
 ```markdown
 | foo | bar |
 | --- | --- |
-
 ```
 
 Output:
@@ -298,7 +298,7 @@ Input:
 
 ```markdown
 | foo | bar |
-| --- | --- |
+| --- | --- | --- |
 | bee |
 | poo | yaa | nuu |
 ```
@@ -335,7 +335,6 @@ Input:
 ```markdown
 | foo | bar |
 | --- | --- |
-
 ```
 
 Output:

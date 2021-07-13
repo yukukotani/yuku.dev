@@ -1,0 +1,29 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogFooter from '../components/BlogFooter.astro';
+import ArticlePreview from '../components/ArticlePreview.astro';
+import Container from "../components/Container.astro";
+
+const dateFormat = "yyyy-MM-dd";
+
+const allArticles = Astro.fetchContent('./articles/**/*.md');
+allArticles = allArticles.sort((a, b) => {
+  return new Date(b.publishDate) - new Date(a.publishDate)
+});
+
+---
+<html>
+  <head>
+    <BaseHead url={Astro.request.canonicalURL} />
+  </head>
+
+  <body>
+    <BlogHeader />
+    <Container>
+      {allArticles.map(p => <ArticlePreview article={p} />)}
+    </Container>
+    <BlogFooter />
+  </body>
+</html>
