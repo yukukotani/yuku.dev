@@ -2,7 +2,6 @@ import { FunctionalComponent, h } from 'preact';
 import { useMemo } from 'preact/hooks';
 import styles from './Article.module.scss';
 import { format } from 'date-fns';
-import clsx from 'clsx';
 
 type Props = {
   title: string;
