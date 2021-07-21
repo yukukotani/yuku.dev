@@ -1,0 +1,11 @@
+@use 'github-markdown-css/github-markdown.css';
+
+.date {
+  color: var(--color-gray);
+}
+.title {
+  margin-bottom: 20px;
+}
+.markdown-body {
+  line-height: 1.7;
+}
