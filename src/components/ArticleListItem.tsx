@@ -13,19 +13,20 @@ export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
   const formattedDate = useMemo(() => {
     return format(new Date(article.publishDate), 'yyyy-MM-dd');
   }, [article]);
+  const isZenn = useMemo(() => article.source === 'zenn', []);
 
   return (
     <article class={styles.article}>
       <div>
         <span class={styles.date}>{formattedDate}</span>
-        {article.source === 'zenn' && (
+        {isZenn && (
           <span class={styles.zenn}>
             <ZennIcon height="10" className={styles.icon} />
             Zenn
           </span>
         )}
       </div>
-      <a href={article.url} target={article.source === 'zenn' ? '_blank' : undefined} rel="noopener">
+      <a href={article.url} target={isZenn ? '_blank' : undefined} rel={isZenn ? 'noopener' : undefined}>
         <span class={styles.title}>{article.title}</span>
       </a>
     </article>
