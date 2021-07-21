@@ -1,6 +1,6 @@
 import { FunctionalComponent, h } from 'preact';
 import { useMemo } from 'preact/hooks';
-import styles from './ArticleItem.module.scss';
+import styles from './ArticleListItem.module.scss';
 import { format } from 'date-fns';
 import { Article } from '../models/Article';
 
@@ -8,7 +8,7 @@ type Props = {
   article: Article;
 };
 
-const ArticleItem: FunctionalComponent<Props> = ({ article }) => {
+export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
   const formattedDate = useMemo(() => {
     return format(new Date(article.publishDate), 'yyyy-MM-dd');
   }, [article]);
@@ -22,5 +22,3 @@ const ArticleItem: FunctionalComponent<Props> = ({ article }) => {
     </article>
   );
 };
-
-export default ArticleItem;

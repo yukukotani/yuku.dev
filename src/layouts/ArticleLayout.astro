@@ -3,8 +3,8 @@ import { Markdown } from 'astro/components';
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
-import Container from "../components/Container";
-import Article from '../components/Article';
+import { Container } from "../components/Container";
+import { ArticleSection } from '../components/ArticleSection';
 
 const {content} = Astro.props;
 const {title, publishDate, url, ogImage} = content;
@@ -18,9 +18,9 @@ const {title, publishDate, url, ogImage} = content;
   <body>
     <BlogHeader />
     <Container>
-      <Article title={title} publishDate={publishDate}>
+      <ArticleSection title={title} publishDate={publishDate}>
         <slot />
-      </Article>
+      </ArticleSection>
     </Container>
     <BlogFooter />
   </body>
