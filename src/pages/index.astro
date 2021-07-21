@@ -3,15 +3,12 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
-import ArticlePreview from '../components/ArticlePreview.astro';
+import ArticleList from '../components/ArticleList';
 import Container from "../components/Container";
 
 const dateFormat = "yyyy-MM-dd";
 
 const allArticles = Astro.fetchContent('./articles/**/*.md');
-allArticles = allArticles.sort((a, b) => {
-  return new Date(b.publishDate) - new Date(a.publishDate)
-});
 
 ---
 <html lang="ja">
@@ -22,7 +19,7 @@ allArticles = allArticles.sort((a, b) => {
   <body>
     <BlogHeader />
     <Container>
-      {allArticles.map(p => <ArticlePreview article={p} />)}
+      <ArticleList articles={allArticles} />
     </Container>
     <BlogFooter />
   </body>
