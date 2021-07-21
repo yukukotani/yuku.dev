@@ -5,10 +5,16 @@ import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
 import { ArticleList } from '../components/ArticleList';
 import { Container } from "../components/Container";
+import { fetchZennArticles } from "../libs/fetchZennArticles";
 
-const dateFormat = "yyyy-MM-dd";
-
-const allArticles = Astro.fetchContent('./articles/**/*.md');
+const rawInternalArticles = Astro.fetchContent('./articles/**/*.md');
+const internalArticles = rawInternalArticles.map((article) => ({
+  source: 'internal',
+  publishDate: article.publishDate,
+  title: article.title,
+  url: article.url,
+}));
+const zennArticles = await fetchZennArticles();
 
 ---
 <html lang="ja">
@@ -19,7 +25,7 @@ const allArticles = Astro.fetchContent('./articles/**/*.md');
   <body>
     <BlogHeader />
     <Container>
-      <ArticleList articles={allArticles} />
+      <ArticleList articles={[...internalArticles, ...zennArticles]} />
     </Container>
     <BlogFooter />
   </body>

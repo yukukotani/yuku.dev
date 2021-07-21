@@ -1,5 +1,8 @@
+type ArticleSource = 'internal' | 'zenn';
+
 export type Article = {
-  publishDate: string;
+  source: ArticleSource;
+  publishDate: Date;
   url: string;
   title: string;
 };

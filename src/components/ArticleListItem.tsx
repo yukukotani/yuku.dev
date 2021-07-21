@@ -16,7 +16,7 @@ export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
   return (
     <article class={styles.article}>
       <div class={styles.date}>{formattedDate}</div>
-      <a href={article.url}>
+      <a href={article.url} target={article.source === 'zenn' ? '_blank' : undefined} rel="noopener">
         <span class={styles.title}>{article.title}</span>
       </a>
     </article>
