@@ -6,13 +6,11 @@
     color: var(--color-gray);
   }
   .zenn {
-    font-size: 11px;
-    color: var(--color-gray);
+    vertical-align: bottom;
     margin-left: 8px;
-
-    .icon {
-      margin-right: 2px;
-    }
+  }
+  .zennIcon {
+    margin-left: 8px;
   }
   .title {
     font-size: 16px;

@@ -17,12 +17,11 @@ export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
 
   return (
     <article class={styles.article}>
-      <div>
+      <div class={styles.attribute}>
         <span class={styles.date}>{formattedDate}</span>
         {isZenn && (
-          <span class={styles.zenn}>
-            <ZennIcon height="10" className={styles.icon} />
-            Zenn
+          <span className={styles.zenn}>
+            <ZennIcon height="12" />
           </span>
         )}
       </div>
