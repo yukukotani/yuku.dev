@@ -35,7 +35,7 @@ const description = "こたにゆうくのブログ";
 <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
 
 <!-- Analytics -->
-{ process.env.NODE_ENV === "production" ? <>
+{ process.env.VERCEL_ENV === "production" ? <>
   <script async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
   <script>
     window.dataLayer = window.dataLayer || [];
