@@ -36,8 +36,10 @@ const description = "こたにゆうくのブログ";
 <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
 
 <!-- Analytics -->
-{ process.env.VERCEL_ENV === "production" ? <>
+{ process.env.VERCEL_ENV === "production" ? 
   <script async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
+  : null }
+{ process.env.VERCEL_ENV === "production" ?
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -46,4 +48,4 @@ const description = "こたにゆうくのブログ";
       page_path: window.location.pathname,
     });
   </script>
-</> : null }
+  : null }
