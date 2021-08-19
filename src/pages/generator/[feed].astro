@@ -10,7 +10,6 @@ export async function getStaticPaths({rss}) {
     url: article.url,
   }));
   const sortedArticles = internalArticles.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
-  console.log(sortedArticles)
   // Generate an RSS feed from this collection
   rss({
     // The RSS Feed title, description, and custom metadata.
