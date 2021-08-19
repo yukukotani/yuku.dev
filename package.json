@@ -17,7 +17,7 @@
     "date-fns": "^2.22.1",
     "github-markdown-css": "^4.0.0",
     "node-fetch": "^2.6.1",
-    "remark-external-links": "^8.0.0",
-    "remark-gfm": "^1.0.0"
+    "remark-external-links": "^9.0.0",
+    "remark-gfm": "^2.0.0"
   }
 }
