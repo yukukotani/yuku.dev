@@ -5,7 +5,7 @@ layout: '../../../layouts/ArticleLayout.astro'
 ogImage: https://i.gyazo.com/2b2029e74fd7870cfcf8b0c3288adbba.png
 ---
 
-いま働いている Ubie で OSS に寄付していくことを決め、まず手始めに JavaScript トランスパイラの [Babel](https://babeljs.io/) に$500 の寄付を行いました。日本のスタートアップが OSS に寄付をするのはまだあまり目にしないため、僕がスタートアップだからこそ OSS に寄付しようと考えた理由をご紹介します。
+いま働いている Ubie で OSS に寄付していくことを決め、まず手始めに JavaScript トランスパイラの [Babel](https://babeljs.io/) に$500 の寄付を行いました。日本のスタートアップが OSS に寄付をするのはまだあまり目にしないため、Ubie がスタートアップだからこそ OSS に寄付しようと考えた理由をご紹介します。
 
 ![](https://i.gyazo.com/2b2029e74fd7870cfcf8b0c3288adbba.png)
 
