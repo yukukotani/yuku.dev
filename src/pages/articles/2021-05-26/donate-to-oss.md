@@ -1,5 +1,5 @@
 ---
-title: スタートアップだからこそ OSS に寄付をする理由
+title: Ubie がスタートアップだからこそ OSS に寄付をする理由
 publishDate: 2021-05-26
 layout: '../../../layouts/ArticleLayout.astro'
 ogImage: https://i.gyazo.com/2b2029e74fd7870cfcf8b0c3288adbba.png
