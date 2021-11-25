@@ -1,5 +1,5 @@
 ---
-title: Twitter 投票をして webpack に $1000 寄付した
+title: Ubie として Twitter 投票をして webpack に $1000 寄付した
 publishDate: 2021-07-19
 layout: '../../../layouts/ArticleLayout.astro'
 ogImage: https://i.gyazo.com/b710c14ce79c33e99c5c2bd7fec67837.png
