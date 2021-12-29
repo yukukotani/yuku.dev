@@ -5,6 +5,11 @@ export default {
   },
   renderers: ['@astrojs/renderer-preact'],
   markdownOptions: {
-    remarkPlugins: ['remark-gfm', ['remark-external-links', { rel: ['noopener'] }]],
+    render: [
+      '@astrojs/markdown-remark',
+      {
+        remarkPlugins: ['remark-gfm', ['remark-external-links', { rel: ['noopener'] }]],
+      },
+    ],
   },
 };
