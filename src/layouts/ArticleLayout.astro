@@ -6,11 +6,11 @@ import { Container } from "../components/Container";
 import { ArticleSection } from '../components/ArticleSection';
 
 const {content} = Astro.props;
-const {title, publishDate, url, ogImage} = content;
+const {title, publishDate, url, ogImage, description} = content;
 ---
 <html lang="ja">
   <head>
-    <BaseHead title={title} url={Astro.request.canonicalURL} ogImage={ogImage} />
+    <BaseHead title={title} url={Astro.request.canonicalURL} ogImage={ogImage} description={description} />
     <link rel="stylesheet" href="https://cdn.skypack.dev/prism-themes/themes/prism-darcula.css">
   </head>
 

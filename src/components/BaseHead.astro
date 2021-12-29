@@ -3,10 +3,11 @@ export interface Props {
   title?: string;
   url: string;
   ogImage?: string;
+  description?: string;
 }
-const { title, url, ogImage } = Astro.props;
+const { title, url, ogImage, description } = Astro.props;
 const fullTitle = title ? `${title} | Yuku Kotani` : "Articles | Yuku Kotani"
-const description = "こたにゆうくのブログ";
+const fullDescription = description || "こたにゆうくのブログ";
 ---
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -16,13 +17,13 @@ const description = "こたにゆうくのブログ";
 <!-- Primary Meta Tags -->
 <title>{fullTitle}</title>
 <meta name="title" content={fullTitle} />
-<meta name="description" content={description} />
+<meta name="description" content={fullDescription} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={url} />
 <meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description} />
+<meta property="og:description" content={fullDescription} />
 <meta property="og:image" content={ogImage || "https://yuku.dev/icon.png"} />
 
 <!-- Twitter -->
