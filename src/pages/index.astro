@@ -3,12 +3,13 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
+import { Article } from '../models/Article';
 import { ArticleList } from '../components/ArticleList';
 import { Container } from "../components/Container";
 import { fetchZennArticles } from "../libs/fetchZennArticles";
 
 const rawInternalArticles = Astro.fetchContent('./articles/**/*.md');
-const internalArticles = rawInternalArticles.map((article) => ({
+const internalArticles: Article[] = rawInternalArticles.map((article) => ({
   source: 'internal',
   publishDate: article.publishDate,
   title: article.title,
@@ -19,7 +20,7 @@ const zennArticles = await fetchZennArticles();
 ---
 <html lang="ja">
   <head>
-    <BaseHead url={Astro.request.canonicalURL} />
+    <BaseHead url={Astro.request.canonicalURL.toString()} />
   </head>
 
   <body>
