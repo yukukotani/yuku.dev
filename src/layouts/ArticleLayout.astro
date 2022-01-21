@@ -10,7 +10,7 @@ const {title, publishDate, url, ogImage, description} = content;
 ---
 <html lang="ja">
   <head>
-    <BaseHead title={title} url={Astro.request.canonicalURL} ogImage={ogImage} description={description} />
+    <BaseHead title={title} url={Astro.request.canonicalURL.toString()} ogImage={ogImage} description={description} />
     <link rel="stylesheet" href="https://cdn.skypack.dev/prism-themes/themes/prism-darcula.css">
   </head>
 

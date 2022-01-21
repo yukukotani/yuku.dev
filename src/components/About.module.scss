@@ -1,0 +1,20 @@
+@use 'github-markdown-css/github-markdown.css';
+
+.icons {
+  display: flex;
+  gap: 16px;
+  & img {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+}
+.markdown-body {
+  line-height: 1.7;
+
+  & pre {
+    background-color: #2b2b2b;
+  }
+}

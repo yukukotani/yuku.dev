@@ -1,0 +1,22 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogFooter from '../components/BlogFooter.astro';
+import { About } from '../components/About';
+import { Container } from "../components/Container";
+
+---
+<html lang="ja">
+  <head>
+    <BaseHead url={Astro.request.canonicalURL.toString()} />
+  </head>
+
+  <body>
+    <BlogHeader />
+    <Container>
+      <About />
+    </Container>
+    <BlogFooter hideProfile />
+  </body>
+</html>

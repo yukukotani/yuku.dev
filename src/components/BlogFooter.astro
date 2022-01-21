@@ -1,18 +1,26 @@
+---
+export interface Props {
+  hideProfile?: boolean;
+}
+
+const { hideProfile = false } = Astro.props;
+
+---
 <header class="footer">
-  <div class="profile">
+  { !hideProfile && <div class="profile">
     <picture>
       <source type="image/webp" srcset="/icon.webp" />
       <img src="/icon.png" class="icon" alt="yuku's icon" />
     </picture>
     <div>
-      <div class="name">Yuku Kotani</div>
+      <div class="name"><a href="/about">Yuku Kotani</a></div>
       <div class="description">
-        Software Engineer @ <a href="https://ubie.app" target="_blank" rel="noopener">Ubie, Inc.</a>
+        Software Engineer @ Ubie, Inc.</a>
         <br />
         Student (B3) @ Univ. of Tsukuba
       </div>
     </div>
-  </div>
+  </div>}
   <div class="links">
     <a href="https://github.com/Monchi" target="_blank" rel="noopener">GitHub</a>
     <a href="https://twitter.com/MonchiFC" target="_blank" rel="noopener">Twitter</a>
