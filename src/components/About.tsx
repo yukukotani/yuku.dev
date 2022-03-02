@@ -30,7 +30,7 @@ export const About: FunctionalComponent = () => {
           </li>
           <li>
             GitHub:{' '}
-            <a href="https://twitter.com/Monchi" target="_blank" rel="noopener">
+            <a href="https://github.com/Monchi" target="_blank" rel="noopener">
               @Monchi
             </a>
           </li>
