@@ -47,7 +47,7 @@ export const About: FunctionalComponent = () => {
                 </a>
               </li>
               <li>
-                <a href="https://sg.ubie.app" target="_blank" rel="noopener">
+                <a href="https://ubiehealth.com" target="_blank" rel="noopener">
                   Ubie AI Symptom Checker
                 </a>
               </li>
