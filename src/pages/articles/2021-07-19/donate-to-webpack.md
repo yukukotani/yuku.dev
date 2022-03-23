@@ -17,7 +17,7 @@ Ubie で、前回の [Babel](https://babeljs.io/) に続いて [webpack](https:/
 
 そこで、以下のように Twitter で投票をしてもらった。投票してくれた方はありがとうございます。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Ubie で次に寄付する OSS を決めたく、投票お願いします！！！<br>僕のフォロワーに偏って欲しくないので RT してくれると嬉しいです</p>&mdash; コタニ ユウク (@MonchiFC) <a href="https://twitter.com/MonchiFC/status/1413427987215568902?ref_src=twsrc%5Etfw">2021年7月9日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Ubie で次に寄付する OSS を決めたく、投票お願いします！！！<br>僕のフォロワーに偏って欲しくないので RT してくれると嬉しいです</p>&mdash; コタニ ユウク (@yukukotani) <a href="https://twitter.com/yukukotani/status/1413427987215568902?ref_src=twsrc%5Etfw">2021年7月9日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 投票の候補は社内で雑に募集した。インフラレイヤまで含め様々な候補が出たが、フォロワーの性質による偏りをできるだけ避けるため、JavaScript エコシステムの OSS に絞った。次回は他の分野の OSS を選出する予定。
 

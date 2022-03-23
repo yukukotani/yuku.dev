@@ -24,14 +24,14 @@ export const About: FunctionalComponent = () => {
         <ul>
           <li>
             Twitter:{' '}
-            <a href="https://twitter.com/MonchiFC" target="_blank" rel="noopener">
-              @MonchiFC
+            <a href="https://twitter.com/yukukotani" target="_blank" rel="noopener">
+              @yukukotani
             </a>
           </li>
           <li>
             GitHub:{' '}
-            <a href="https://github.com/Monchi" target="_blank" rel="noopener">
-              @Monchi
+            <a href="https://github.com/yukukotani" target="_blank" rel="noopener">
+              @yukukotani
             </a>
           </li>
           <li>Email: yukukotani[at]gmail.com</li>
