@@ -8,12 +8,12 @@ import { ArticleList } from '../components/ArticleList';
 import { Container } from "../components/Container";
 import { fetchYukuZennArticles, fetchUbieZennArticles } from "../libs/fetchZennArticles";
 
-const rawInternalArticles = Astro.fetchContent('./articles/**/*.md');
+const rawInternalArticles = await Astro.glob('./articles/**/*.md');
 const internalArticles: Article[] = rawInternalArticles.map((article) => ({
   source: 'internal',
-  publishDate: article.publishDate,
-  title: article.title,
-  url: article.url,
+  publishDate: new Date(article.frontmatter.publishDate),
+  title: article.frontmatter.title as string,
+  url: article.url as string,
 }));
 const yukuZennArticles = await fetchYukuZennArticles();
 const ubieZennArticles = await fetchUbieZennArticles();
@@ -21,7 +21,7 @@ const ubieZennArticles = await fetchUbieZennArticles();
 ---
 <html lang="ja">
   <head>
-    <BaseHead url={Astro.request.canonicalURL.toString()} />
+    <BaseHead url={Astro.canonicalURL.toString()} />
   </head>
 
   <body>

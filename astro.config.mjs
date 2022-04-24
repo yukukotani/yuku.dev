@@ -1,15 +1,14 @@
-export default {
-  buildOptions: {
+import { defineConfig } from 'astro/config';
+import preact from '@astrojs/preact';
+
+export default defineConfig({
+  build: {
     site: 'https://yuku.dev',
     sitemap: true,
   },
-  renderers: ['@astrojs/renderer-preact'],
-  markdownOptions: {
-    render: [
-      '@astrojs/markdown-remark',
-      {
-        remarkPlugins: ['remark-gfm', ['remark-external-links', { rel: ['noopener'] }]],
-      },
-    ],
+  integrations: [preact()],
+  markdown: {
+    syntaxHighlight: 'prism',
+    remarkPlugins: ['remark-gfm', ['remark-external-links', { rel: ['noopener'] }]],
   },
-};
+});

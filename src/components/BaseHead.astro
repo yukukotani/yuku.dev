@@ -1,4 +1,6 @@
 ---
+import "../styles/global.scss"
+
 export interface Props {
   title?: string;
   url: string;
@@ -33,15 +35,14 @@ const fullDescription = description || "こたにゆうくのブログ";
 <meta property="twitter:site" content="@yukukotani" />
 
 <!-- Stylesheet -->
-<link rel="stylesheet" href={Astro.resolve('../styles/global.scss')} />
 <link rel="stylesheet" href="https://unpkg.com/modern-css-reset@1.4.0/dist/reset.min.css" />
 
 <!-- Analytics -->
 { process.env.VERCEL_ENV === "production" ? 
-  <script async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
+  <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
   : null }
 { process.env.VERCEL_ENV === "production" ?
-  <script>
+  <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());

@@ -1,8 +1,6 @@
 ---
-import { fetchZennArticles } from "../../libs/fetchZennArticles";
-
 export async function getStaticPaths({rss}) {
-  const rawInternalArticles = Astro.fetchContent('../articles/**/*.md');
+  const rawInternalArticles = await Astro.glob('../articles/**/*.md');
   const internalArticles = rawInternalArticles.map((article) => ({
     source: 'internal',
     publishDate: article.publishDate,

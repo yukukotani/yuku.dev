@@ -9,7 +9,7 @@ import { Container } from "../components/Container";
 ---
 <html lang="ja">
   <head>
-    <BaseHead url={Astro.request.canonicalURL.toString()} title="About" />
+    <BaseHead url={Astro.canonicalURL.toString()} title="About" />
   </head>
 
   <body>
