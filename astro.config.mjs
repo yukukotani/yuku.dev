@@ -2,10 +2,7 @@ import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
 
 export default defineConfig({
-  build: {
-    site: 'https://yuku.dev',
-    sitemap: true,
-  },
+  site: 'https://yuku.dev',
   integrations: [preact()],
   markdown: {
     syntaxHighlight: 'prism',
