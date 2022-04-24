@@ -3,8 +3,8 @@ export async function getStaticPaths({rss}) {
   const rawInternalArticles = await Astro.glob('../articles/**/*.md');
   const internalArticles = rawInternalArticles.map((article) => ({
     source: 'internal',
-    publishDate: article.publishDate,
-    title: article.title,
+    publishDate: new Date(article.frontmatter.publishDate),
+    title: article.frontmatter.title,
     url: article.url,
   }));
   const sortedArticles = internalArticles.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
@@ -15,7 +15,7 @@ export async function getStaticPaths({rss}) {
     description: 'こたにゆうくのブログ',
     customData: `<language>ja-jp</language>`,
     // The list of items for your RSS feed, sorted.
-    items: internalArticles.map(item => ({
+    items: sortedArticles.map(item => ({
       title: item.title,
       link: item.url,
       pubDate: item.publishDate,
