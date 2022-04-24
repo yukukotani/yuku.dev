@@ -6,7 +6,7 @@ import BlogFooter from '../components/BlogFooter.astro';
 import { Article } from '../models/Article';
 import { ArticleList } from '../components/ArticleList';
 import { Container } from "../components/Container";
-import { fetchZennArticles } from "../libs/fetchZennArticles";
+import { fetchYukuZennArticles, fetchUbieZennArticles } from "../libs/fetchZennArticles";
 
 const rawInternalArticles = Astro.fetchContent('./articles/**/*.md');
 const internalArticles: Article[] = rawInternalArticles.map((article) => ({
@@ -15,7 +15,8 @@ const internalArticles: Article[] = rawInternalArticles.map((article) => ({
   title: article.title,
   url: article.url,
 }));
-const zennArticles = await fetchZennArticles();
+const yukuZennArticles = await fetchYukuZennArticles();
+const ubieZennArticles = await fetchUbieZennArticles();
 
 ---
 <html lang="ja">
@@ -26,7 +27,7 @@ const zennArticles = await fetchZennArticles();
   <body>
     <BlogHeader />
     <Container>
-      <ArticleList articles={[...internalArticles, ...zennArticles]} />
+      <ArticleList articles={[...internalArticles, ...yukuZennArticles, ...ubieZennArticles]} />
     </Container>
     <BlogFooter />
   </body>
