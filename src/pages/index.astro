@@ -5,8 +5,8 @@ import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
 import { Article } from '../models/Article';
 import { ArticleList } from '../components/ArticleList';
-import { Container } from "../components/Container";
-import { fetchYukuZennArticles, fetchUbieZennArticles } from "../libs/fetchZennArticles";
+import { Container } from '../components/Container';
+import { fetchYukuZennArticles, fetchUbieZennArticles } from '../libs/fetchZennArticles';
 
 const rawInternalArticles = await Astro.glob('./articles/**/*.md');
 const internalArticles: Article[] = rawInternalArticles.map((article) => ({
@@ -17,11 +17,11 @@ const internalArticles: Article[] = rawInternalArticles.map((article) => ({
 }));
 const yukuZennArticles = await fetchYukuZennArticles();
 const ubieZennArticles = await fetchUbieZennArticles();
-
 ---
+
 <html lang="ja">
   <head>
-    <BaseHead url={Astro.canonicalURL.toString()} />
+    <BaseHead url={Astro.url.toString()} />
   </head>
 
   <body>

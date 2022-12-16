@@ -4,12 +4,12 @@ import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
 import { About } from '../components/About';
-import { Container } from "../components/Container";
-
+import { Container } from '../components/Container';
 ---
+
 <html lang="ja">
   <head>
-    <BaseHead url={Astro.canonicalURL.toString()} title="About" />
+    <BaseHead url={Astro.url.toString()} title="About" />
   </head>
 
   <body>

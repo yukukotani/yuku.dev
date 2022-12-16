@@ -2,16 +2,17 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
-import { Container } from "../components/Container";
+import { Container } from '../components/Container';
 import { ArticleSection } from '../components/ArticleSection';
 
-const {content} = Astro.props;
-const {title, publishDate, url, ogImage, description} = content;
+const { content } = Astro.props;
+const { title, publishDate, url, ogImage, description } = content;
 ---
+
 <html lang="ja">
   <head>
-    <BaseHead title={title} url={Astro.canonicalURL.toString()} ogImage={ogImage} description={description} />
-    <link rel="stylesheet" href="https://cdn.skypack.dev/prism-themes/themes/prism-darcula.css">
+    <BaseHead title={title} url={Astro.url.toString()} ogImage={ogImage} description={description} />
+    <link rel="stylesheet" href="https://cdn.skypack.dev/prism-themes/themes/prism-darcula.css" />
   </head>
 
   <body>
@@ -24,4 +25,3 @@ const {title, publishDate, url, ogImage, description} = content;
     <BlogFooter />
   </body>
 </html>
-
