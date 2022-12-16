@@ -1,5 +1,5 @@
 ---
-export async function getStaticPaths({rss}) {
+export async function getStaticPaths({ rss }) {
   const rawInternalArticles = await Astro.glob('../articles/**/*.md');
   const internalArticles = rawInternalArticles.map((article) => ({
     source: 'internal',
@@ -15,17 +15,18 @@ export async function getStaticPaths({rss}) {
     description: 'こたにゆうくのブログ',
     customData: `<language>ja-jp</language>`,
     // The list of items for your RSS feed, sorted.
-    items: sortedArticles.map(item => ({
+    items: sortedArticles.map((item) => ({
       title: item.title,
       link: item.url,
       pubDate: item.publishDate,
     })),
     // Optional: Customize where the file is written to.
     // Otherwise, defaults to "/rss.xml"
-    dest: "/feed.xml",
+    dest: '/feed.xml',
   });
   // Return your paths
   return [];
 }
 ---
+
 <></>

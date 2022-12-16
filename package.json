@@ -5,7 +5,7 @@
   "scripts": {
     "start": "astro dev",
     "build": "astro build",
-    "format": "prettier -w src"
+    "format": "prettier --plugin-search-dir=. -w src"
   },
   "devDependencies": {
     "@astrojs/preact": "^1.2.0",

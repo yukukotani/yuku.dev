@@ -1,5 +1,5 @@
 ---
-import "../styles/global.scss"
+import '../styles/global.scss';
 
 export interface Props {
   title?: string;
@@ -8,9 +8,10 @@ export interface Props {
   description?: string;
 }
 const { title, url, ogImage, description } = Astro.props;
-const fullTitle = title ? `${title} | Yuku Kotani` : "Articles | Yuku Kotani"
-const fullDescription = description || "こたにゆうくのブログ";
+const fullTitle = title ? `${title} | Yuku Kotani` : 'Articles | Yuku Kotani';
+const fullDescription = description || 'こたにゆうくのブログ';
 ---
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
@@ -27,10 +28,10 @@ const fullDescription = description || "こたにゆうくのブログ";
 <meta property="og:url" content={url} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={fullDescription} />
-<meta property="og:image" content={ogImage || "https://yuku.dev/icon.png"} />
+<meta property="og:image" content={ogImage || 'https://yuku.dev/icon.png'} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+<meta property="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
 <meta property="twitter:url" content={url} />
 <meta property="twitter:creator" content="@yukukotani" />
 <meta property="twitter:site" content="@yukukotani" />
@@ -39,16 +40,20 @@ const fullDescription = description || "こたにゆうくのブログ";
 <link rel="stylesheet" href="https://unpkg.com/modern-css-reset@1.4.0/dist/reset.min.css" />
 
 <!-- Analytics -->
-{ process.env.VERCEL_ENV === "production" ? 
-  <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
-  : null }
-{ process.env.VERCEL_ENV === "production" ?
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+{
+  process.env.VERCEL_ENV === 'production' ? (
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=G-Y6GFJZCCEN`} />
+  ) : null
+}
+<script is:inline define:vars={{ isProd: process.env.VERCEL_ENV === 'production' }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  if (isProd) {
     gtag('js', new Date());
     gtag('config', 'G-Y6GFJZCCEN', {
       page_path: window.location.pathname,
     });
-  </script>
-  : null }
+  }
+</script>
