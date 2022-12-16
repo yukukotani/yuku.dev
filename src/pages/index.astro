@@ -2,11 +2,11 @@
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
-import BlogFooter from '../components/BlogFooter.astro';
 import { Article } from '../models/Article';
 import { ArticleList } from '../components/ArticleList';
 import { Container } from '../components/Container';
 import { fetchYukuZennArticles, fetchUbieZennArticles } from '../libs/fetchZennArticles';
+import { Footer } from '../components/Footer';
 
 const rawInternalArticles = await Astro.glob('./articles/**/*.md');
 const internalArticles: Article[] = rawInternalArticles.map((article) => ({
@@ -29,6 +29,6 @@ const ubieZennArticles = await fetchUbieZennArticles();
     <Container>
       <ArticleList articles={[...internalArticles, ...yukuZennArticles, ...ubieZennArticles]} />
     </Container>
-    <BlogFooter />
+    <Footer />
   </body>
 </html>
