@@ -17,15 +17,17 @@ export async function fetchYukuZennArticles(): Promise<readonly Article[]> {
 const ubieZennSlugs: string[] = ['firebase-auth-hack', 'oss-donation'];
 
 export async function fetchUbieZennArticles(): Promise<readonly Article[]> {
-  const res = await fetch('https://zenn.dev/api/articles?username=ubie&count=100&order=latest');
-  const body = await res.json();
+  const bodies = await Promise.all(
+    ubieZennSlugs.map(async (slug) => {
+      const res = await fetch(`https://zenn.dev/api/articles/${slug}`);
+      return await res.json();
+    }),
+  );
 
-  return (body.articles as any[])
-    .filter((article) => ubieZennSlugs.includes(article.slug))
-    .map((article) => ({
-      source: 'zenn',
-      publishDate: parseISO(article.published_at),
-      title: article.title,
-      url: `https://zenn.dev/${article.user.username}/articles/${article.slug}`,
-    }));
+  return bodies.map((body) => ({
+    source: 'zenn',
+    publishDate: parseISO(body.article.published_at),
+    title: body.article.title,
+    url: `https://zenn.dev/${body.article.user.username}/articles/${body.article.slug}`,
+  }));
 }
