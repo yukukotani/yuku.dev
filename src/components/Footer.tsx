@@ -21,7 +21,7 @@ export const Footer: FunctionalComponent<Props> = ({ hideProfile = false }) => {
             <div className={styles.description}>
               Software Engineer @ Ubie, Inc.
               <br />
-              Student (B3) @ Univ. of Tsukuba
+              Student (B4) @ Univ. of Tsukuba
             </div>
           </div>
         </div>
