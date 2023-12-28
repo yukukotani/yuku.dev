@@ -3,28 +3,30 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "astro dev",
+    "dev": "astro dev",
     "build": "astro build",
     "format": "prettier --plugin-search-dir=. -w src"
   },
   "devDependencies": {
-    "@astrojs/preact": "^2.2.0",
-    "@astrojs/rss": "^2.4.3",
-    "@types/node-fetch": "^2.6.4",
+    "@astrojs/preact": "^3.0.2",
+    "@astrojs/rss": "^4.0.1",
+    "@types/node-fetch": "^2.6.10",
     "@ubie/prettier-config": "^0.1.0",
-    "astro": "^2.5.3",
-    "prettier": "^2.8.8",
-    "sass": "^1.62.1"
+    "astro": "^4.0.8",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3",
+    "sass": "^1.69.5"
   },
   "dependencies": {
-    "date-fns": "^2.30.0",
-    "github-markdown-css": "^5.2.0",
-    "node-fetch": "^3.3.1",
-    "preact": "^10.15.0",
+    "date-fns": "^3.0.6",
+    "github-markdown-css": "^5.5.0",
+    "node-fetch": "^3.3.2",
+    "preact": "^10.19.3",
     "remark-external-links": "^9.0.1",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^4.0.0",
+    "sharp": "^0.33.1"
   },
   "volta": {
-    "node": "16.14.2"
+    "node": "20.10.0"
   }
 }
