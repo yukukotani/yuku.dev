@@ -7,9 +7,15 @@
   margin-bottom: 20px;
 }
 .markdown-body {
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 1.05em;
 
   & pre {
     background-color: #2b2b2b;
   }
+}
+
+
+.markdown-body p {
+  margin-bottom: 1.6em;
 }
