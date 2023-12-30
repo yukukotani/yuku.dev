@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 
-const rawInternalArticles = Object.values(import.meta.globEager('./articles/**/*.md'));
-const internalArticles: Parameters<typeof rss>[0]['items'] = rawInternalArticles.map((article) => ({
+const rawInternalArticles = Object.values(import.meta.glob('./articles/**/*.md', { eager: true }));
+const internalArticles: Parameters<typeof rss>[0]['items'] = rawInternalArticles.map((article: any) => ({
   pubDate: new Date(article.frontmatter.publishDate),
   title: article.frontmatter.title,
   link: article.url,
