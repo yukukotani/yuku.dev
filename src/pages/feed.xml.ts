@@ -8,7 +8,7 @@ const internalArticles: Parameters<typeof rss>[0]['items'] = rawInternalArticles
 }));
 const sortedArticles = internalArticles.sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 
-export const get = () => {
+export const GET = () => {
   return rss({
     title: 'こたにゆうくのブログ',
     description: 'こたにゆうくのブログ',
