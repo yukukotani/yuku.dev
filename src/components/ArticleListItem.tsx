@@ -4,6 +4,7 @@ import styles from './ArticleListItem.module.scss';
 import { format } from 'date-fns';
 import { Article } from '../models/Article';
 import { ZennIcon } from './ZennIcon';
+import { NoteIcon } from './NoteIcon';
 
 type Props = {
   article: Article;
@@ -19,11 +20,15 @@ export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
     <article class={styles.article}>
       <div class={styles.attribute}>
         <span class={styles.date}>{formattedDate}</span>
-        {isZenn && (
+        {article.source === 'zenn' ? (
           <span className={styles.zenn}>
             <ZennIcon height="12" />
           </span>
-        )}
+        ) : article.source === 'note' ? (
+          <span className={styles.note}>
+            <NoteIcon height="20" />
+          </span>
+        ) : null}
       </div>
       <a href={article.url} target={isZenn ? '_blank' : undefined} rel={isZenn ? 'noopener' : undefined}>
         <span class={styles.title}>{article.title}</span>

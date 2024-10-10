@@ -1,16 +1,23 @@
 .article {
   padding: 6px 0;
 
+  .attribute {
+    display: flex;
+    align-items: center;
+  }
+
   .date {
     font-size: 14px;
     color: var(--color-gray);
   }
   .zenn {
-    vertical-align: bottom;
+    display: flex;
+    align-items: center;
     margin-left: 8px;
   }
-  .zennIcon {
-    margin-left: 8px;
+  .note {
+    display: flex;
+    align-items: center;
   }
   .title {
     font-size: 16px;

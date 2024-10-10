@@ -1,4 +1,4 @@
-type ArticleSource = 'internal' | 'zenn';
+type ArticleSource = 'internal' | 'zenn' | 'note';
 
 export type Article = {
   source: ArticleSource;
