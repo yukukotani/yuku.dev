@@ -14,7 +14,7 @@ export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
   const formattedDate = useMemo(() => {
     return format(new Date(article.publishDate), 'yyyy-MM-dd');
   }, [article]);
-  const isZenn = useMemo(() => article.source === 'zenn', []);
+  const isExternal = useMemo(() => article.source !== 'internal', []);
 
   return (
     <article class={styles.article}>
@@ -30,7 +30,7 @@ export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
           </span>
         ) : null}
       </div>
-      <a href={article.url} target={isZenn ? '_blank' : undefined} rel={isZenn ? 'noopener' : undefined}>
+      <a href={article.url} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener' : undefined}>
         <span class={styles.title}>{article.title}</span>
       </a>
     </article>
