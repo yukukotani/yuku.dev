@@ -19,7 +19,7 @@ export const Footer: FunctionalComponent<Props> = ({ hideProfile = false }) => {
               <a href="/about">Yuku Kotani</a>
             </div>
             <div className={styles.description}>
-              Software Engineer @ Ubie, Inc.
+              VP of Technology @ Ubie, Inc.
               <br />
               Student (B4) @ Univ. of Tsukuba
             </div>
