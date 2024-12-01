@@ -4,6 +4,7 @@ import BlogHeader from '../components/BlogHeader.astro';
 import { Container } from '../components/Container';
 import { ArticleSection } from '../components/ArticleSection';
 import { Footer } from '../components/Footer';
+import 'katex/dist/katex.min.css';
 
 const { content } = Astro.props;
 
@@ -14,7 +15,6 @@ const { title, publishDate, url, ogImage, description } = content;
   <head>
     <BaseHead title={title} url={Astro.url.toString()} ogImage={ogImage} description={description} />
     <link rel="stylesheet" href="https://cdn.skypack.dev/prism-themes/themes/prism-darcula.css" />
-    <link rel="stylesheet" href="/node_modules/katex/dist/katex.min.css" />
   </head>
 
   <body>
