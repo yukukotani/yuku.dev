@@ -6,6 +6,7 @@ export default defineConfig({
   integrations: [preact()],
   markdown: {
     syntaxHighlight: 'prism',
-    remarkPlugins: ['remark-gfm', ['remark-external-links', { rel: ['noopener'] }]],
+    remarkPlugins: ['remark-gfm', ['remark-external-links', { rel: ['noopener'] }], 'remark-math'],
+    rehypePlugins: ['rehype-katex'],
   },
 });

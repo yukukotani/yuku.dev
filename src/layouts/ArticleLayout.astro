@@ -6,6 +6,7 @@ import { ArticleSection } from '../components/ArticleSection';
 import { Footer } from '../components/Footer';
 
 const { content } = Astro.props;
+
 const { title, publishDate, url, ogImage, description } = content;
 ---
 
@@ -13,6 +14,7 @@ const { title, publishDate, url, ogImage, description } = content;
   <head>
     <BaseHead title={title} url={Astro.url.toString()} ogImage={ogImage} description={description} />
     <link rel="stylesheet" href="https://cdn.skypack.dev/prism-themes/themes/prism-darcula.css" />
+    <link rel="stylesheet" href="/node_modules/katex/dist/katex.min.css" />
   </head>
 
   <body>

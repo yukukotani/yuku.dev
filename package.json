@@ -20,10 +20,13 @@
   "dependencies": {
     "date-fns": "^3.0.6",
     "github-markdown-css": "^5.5.0",
+    "katex": "^0.16.11",
     "node-fetch": "^3.3.2",
     "preact": "^10.19.3",
+    "rehype-katex": "^7.0.1",
     "remark-external-links": "^9.0.1",
     "remark-gfm": "^4.0.0",
+    "remark-math": "^6.0.0",
     "sharp": "^0.33.1"
   },
   "volta": {
