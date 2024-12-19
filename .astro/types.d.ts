@@ -245,6 +245,13 @@ declare module 'astro:content' {
   collection: "calculus-2024";
   data: any
 } & { render(): Render[".md"] };
+"11.md": {
+	id: "11.md";
+  slug: "11";
+  body: string;
+  collection: "calculus-2024";
+  data: any
+} & { render(): Render[".md"] };
 };
 
 	};
