@@ -7,6 +7,6 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: 'prism',
     remarkPlugins: ['remark-gfm', 'remark-math'],
-    rehypePlugins: ['rehype-katex', ['rehype-external-links', { rel: ['noopener'] }]],
+    rehypePlugins: ['rehype-katex', ['rehype-external-links', { rel: ['noopener'], target: '_blank' }]],
   },
 });
