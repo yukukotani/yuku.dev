@@ -146,9 +146,10 @@
 
 .markdown-body img {
   border-style: none;
-  max-width: 100%;
+  max-width: 90%;
   box-sizing: content-box;
   background-color: var(--color-canvas-default);
+  margin: 0 auto;
 }
 
 .markdown-body code,
