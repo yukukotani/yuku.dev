@@ -53,7 +53,7 @@ export const About: FunctionalComponent = () => {
               </li>
             </ul>
           </li>
-          <li>Student (B4) at University of Tsukuba</li>
+          <li>Technical Adviser at SALESCORE, Inc.</li>
         </ul>
       </div>
     </article>
