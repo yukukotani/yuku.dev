@@ -8,6 +8,7 @@ import { Container } from '../components/Container';
 import { fetchYukuZennArticles, fetchUbieZennArticles } from '../libs/fetchZennArticles';
 import { Footer } from '../components/Footer';
 import { fetchNoteArticles } from '../libs/fetchNoteArticles';
+import { fetchSpeakerDeckArticles } from '../libs/fetchSpeakerDeckArticles';
 
 const rawInternalArticles = await Astro.glob('./articles/**/*.md');
 const internalArticles: Article[] = rawInternalArticles.map((article) => ({
@@ -19,6 +20,7 @@ const internalArticles: Article[] = rawInternalArticles.map((article) => ({
 const yukuZennArticles = await fetchYukuZennArticles();
 const ubieZennArticles = await fetchUbieZennArticles();
 const noteArticles = await fetchNoteArticles();
+const speakerDeckArticles = await fetchSpeakerDeckArticles();
 ---
 
 <html lang="ja">
@@ -29,7 +31,7 @@ const noteArticles = await fetchNoteArticles();
   <body>
     <BlogHeader />
     <Container>
-      <ArticleList articles={[...internalArticles, ...yukuZennArticles, ...ubieZennArticles, ...noteArticles]} />
+      <ArticleList articles={[...internalArticles, ...yukuZennArticles, ...ubieZennArticles, ...noteArticles, ...speakerDeckArticles]} />
     </Container>
     <Footer />
   </body>

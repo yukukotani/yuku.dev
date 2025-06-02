@@ -5,6 +5,7 @@ import { format } from 'date-fns';
 import { Article } from '../models/Article';
 import { ZennIcon } from './ZennIcon';
 import { NoteIcon } from './NoteIcon';
+import { SpeakerDeckIcon } from './SpeakerDeckIcon';
 
 type Props = {
   article: Article;
@@ -27,6 +28,10 @@ export const ArticleListItem: FunctionalComponent<Props> = ({ article }) => {
         ) : article.source === 'note' ? (
           <span className={styles.note}>
             <NoteIcon height="20" />
+          </span>
+        ) : article.source === 'speakerdeck' ? (
+          <span className={styles.speakerdeck}>
+            <SpeakerDeckIcon height="16" />
           </span>
         ) : null}
       </div>
