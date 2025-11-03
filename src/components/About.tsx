@@ -39,7 +39,7 @@ export const About: FunctionalComponent = () => {
         <h4>仕事・所属</h4>
         <ul>
           <li>
-            <span>VP of Technology at Ubie, Inc.</span>
+            <span>CTO at Ubie, Inc.</span>
             <ul>
               <li>
                 <a href="https://ubie.app" target="_blank" rel="noopener">

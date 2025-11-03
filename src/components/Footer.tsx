@@ -18,7 +18,7 @@ export const Footer: FunctionalComponent<Props> = ({ hideProfile = false }) => {
             <div className={styles.name}>
               <a href="/about">Yuku Kotani</a>
             </div>
-            <div className={styles.description}>VP of Technology @ Ubie, Inc.</div>
+            <div className={styles.description}>CTO @ Ubie, Inc.</div>
           </div>
         </div>
       )}
